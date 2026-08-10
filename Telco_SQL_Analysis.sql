@@ -147,7 +147,7 @@ where streamingtv='Yes'
 and streamingmovies='Yes'
 group by streamingTV,streamingmovies;
 
-                        --LEVEL 2: MEDIUM (Business Analysis)
+                       
                                **Churn Analysis
   
 --Which contract type has the highest number of churned customers?
@@ -233,9 +233,8 @@ group by gender
 order by churn_rate desc ;
 
 
-                      --Customer Behavior Analysis
+                        --Customer Behavior Analysis
 					  
-select * from telco_churn limit 5 ;
 
 --What is the average tenure of churned customers compared to retained customers?
 select churn ,
@@ -252,7 +251,6 @@ from telco_churn
 group by churn;
 
 --Which tenure group has the highest churn rate?
-select tenure from telco_churn;
 
 select 
          case 
@@ -349,8 +347,7 @@ group by churn ;
 --Which customer groups generate the highest revenue?
 select * from telco_churn limit 1;
 
-                 --LEVEL 3: HARD (Advanced SQL + Analyst Thinking)
-
+                 
                             --Customer Segmentation
 
 --Segment customers into new, regular, and loyal customers based on tenure.
@@ -428,7 +425,7 @@ from telco_churn
 group by paymentmethod,contract
 order by churned_rate desc;
 
-                               --Window Function Practice
+                            
 
 --Rank customers based on their monthly charges.
 select customerid,
@@ -486,7 +483,7 @@ select * from (select contract,
 from telco_churn where totalcharges is not null)t
 where highest_paying = 1
 
-                             --CTE / Subquery Practice
+                             --CTE / Subquery
 							 
 --Create a customer summary showing customer value and churn status.
 
@@ -575,7 +572,7 @@ SELECT
 FROM telco_churn;
 
 
-                      --Real Business Case Questions
+                      -- Business Case Questions
 					  
 --Which customers should the company target for retention campaigns?
 SELECT
